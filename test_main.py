@@ -1,19 +1,25 @@
-import pytest
-from main import Node, Stack
+import unittest
+from main import *
+"""тесты"""
+n1 = Node(5, None)
+n2 = Node('a', n1)
+
+stack = Stack()
+stack.top('data1')
+stack.top('data2')
+stack.top('data3')
 
 
-@pytest.fixture()
-def node_10():
-    return Node(20)
+class TestMain(unittest.TestCase):
 
-def test_node_init():
-    node = Node(10)
-    assert node.data == 10
-    assert node.next_node is None
+    def test_Node(self):
+        self.assertEqual(n1.data, 5)
+        self.assertEqual(n2.data, 'a')
+        self.assertEqual(n1.data, 5)
+        self.assertEqual(n1.next_node, None)
 
-
-def test_node_next_nove():
-    """проверка next_node ссылается на узел"""
-    node1 = Node(10)
-    node2 = Node(229, node1)
-    assert node2.next_node is node1
+    def test_Stack(self):
+        self.assertEqual(stack.top.data, 'data3')
+        self.assertEqual(stack.top.next_node.data, 'data2')
+        self.assertEqual(stack.top.next_node.next_node.data, 'data1')
+        self.assertEqual(stack.top.next_node.next_node.next_node, None)
