@@ -1,5 +1,10 @@
+import pytest
 from main import Node, Stack
 
+
+@pytest.fixture()
+def node_10():
+    return Node(20)
 
 def test_node_init():
     node = Node(10)
