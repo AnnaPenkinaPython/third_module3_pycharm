@@ -1,25 +1,27 @@
+
+
+"""Узел нод для с двумя атрибутами"""
+
+
 class Node:
     def __init__(self, data=None, next_node=None):
         self.data = data
         self.next_node = next_node
 
 
+"""Узел стак  """
+
+
 class Stack:
-    def __int__(self, top=None):
-        self.top = top
+    def __init__(self):
+        self.top = None
 
-    @property
-    def top(self):
-        """"добавляет данные в стэк"""
-        return self.top
+    """Добавление данных в стак"""
 
-    @top.setter
-    def top(self, value):
-        if isinstance(value, Node):
-            self.top = value
-        else:
-            self.top = Node(value)
-
+    def push(self, value):
+        new_node = Node(data=value)
+        new_node.next_node = self.top
+        self.top = new_node
 
 
 

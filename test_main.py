@@ -5,9 +5,9 @@ n1 = Node(5, None)
 n2 = Node('a', n1)
 
 stack = Stack()
-stack.top('data1')
-stack.top('data2')
-stack.top('data3')
+stack.push('data1')
+stack.push('data2')
+stack.push('data3')
 
 
 class TestMain(unittest.TestCase):
