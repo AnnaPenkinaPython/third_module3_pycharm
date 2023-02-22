@@ -10,6 +10,7 @@ stack.push('data2')
 stack.push('data3')
 
 
+
 class TestMain(unittest.TestCase):
 
     def test_Node(self):
@@ -23,3 +24,7 @@ class TestMain(unittest.TestCase):
         self.assertEqual(stack.top.next_node.data, 'data2')
         self.assertEqual(stack.top.next_node.next_node.data, 'data1')
         self.assertEqual(stack.top.next_node.next_node.next_node, None)
+
+    def pop(self):
+        self.assertEqual(stack.pop, 'data3')
+        self.assertEqual(stack.)

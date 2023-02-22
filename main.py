@@ -1,6 +1,4 @@
-
-
-"""Узел нод для с двумя атрибутами"""
+"""Узел нод для с двумя атрибутами, poetry, unittest"""
 
 
 class Node:
@@ -22,6 +20,15 @@ class Stack:
         new_node = Node(data=value)
         new_node.next_node = self.top
         self.top = new_node
+
+    def pop(self):
+        remove = self.top
+        self.top = self.top.next_node
+        return remove.data
+
+
+
+
 
 
 
