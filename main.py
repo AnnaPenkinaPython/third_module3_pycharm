@@ -30,5 +30,13 @@ class Stack:
 
 
 
+stack = Stack()
+stack.push('data1')
+stack.push('data2')
+stack.push('data3')
+
+stack.pop()
+stack.pop()
+print(stack.top.data)
 
 
