@@ -23,6 +23,8 @@ class Stack:
 
     def pop(self):
         remove = self.top
+        if self.top is None:
+            return None
         self.top = self.top.next_node
         return remove.data
 
