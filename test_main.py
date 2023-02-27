@@ -14,7 +14,6 @@ stack.pop()
 
 
 class TestMain(unittest.TestCase):
-    class TestMain(unittest.TestCase):
 
         def test_Node(self):
             self.assertEqual(n1.data, 5)
@@ -23,10 +22,9 @@ class TestMain(unittest.TestCase):
             self.assertEqual(n1.next_node, None)
 
         def test_Stack(self):
-            self.assertEqual(stack.top.data, 'data3')
-            self.assertEqual(stack.top.next_node.data, 'data2')
-            self.assertEqual(stack.top.next_node.next_node.data, 'data1')
-            self.assertEqual(stack.top.next_node.next_node.next_node, None)
+            self.assertEqual(stack.top.data, 'data2')
+            self.assertEqual(stack.top.next_node.data, 'data1')
+            self.assertEqual(stack.top.next_node.next_node, None)
 
         def test_pop(self):
             self.assertEqual(stack.top.data, 'data2')
