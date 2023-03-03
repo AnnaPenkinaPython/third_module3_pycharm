@@ -5,16 +5,22 @@ class Node:
 
 
 class Queue:
-    def __init__(self, start=None, stop=None):
-        self.start = start
-        self.stop = stop
+    def __init__(self, head=None, tail=None):
+        self.head = head
+        self.tail = tail
 
 
     def enqueue(self, data):
-        new_node = Node(data=value)
-        if self.start is None:
-            self.start = new_node
-            self.stop = new_node
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
         else:
-            self.stop.next_node = new_node
-            self.stop = new_node
+            self.tail.next_node = new_node
+            self.tail = new_node
+
+queue = Queue()
+queue.enqueue('data1')
+queue.enqueue('data2')
+queue.enqueue('data3')
+
