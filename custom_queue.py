@@ -21,11 +21,8 @@ class Queue:
     def dequeue(self):
         if self.head is None:
             return None
-
         dequeue_element = self.head
-
         self.head = self.head.next_node
-
         return dequeue_element.data
 
 
