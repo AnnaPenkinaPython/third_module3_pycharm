@@ -9,7 +9,6 @@ class Queue:
         self.head = head
         self.tail = tail
 
-
     def enqueue(self, data):
         new_node = Node(data)
         if self.head is None:
@@ -19,8 +18,19 @@ class Queue:
             self.tail.next_node = new_node
             self.tail = new_node
 
+    def dequeue(self):
+        if self.head is None:
+            return None
+
+        dequeue_element = self.head
+
+        self.head = self.head.next_node
+
+        return dequeue_element.data
+
+
 queue = Queue()
 queue.enqueue('data1')
 queue.enqueue('data2')
 queue.enqueue('data3')
-
+print(queue.dequeue())
