@@ -37,5 +37,17 @@ class LinkedList:
                 n = n.next_node
             n.next_node = next_node
 
+    def print_ll(self):
+        ll_string = ''
+        node = self.head
+        if node is None:
+            print(None)
+        while node:
+            ll_string += f' {str(node.data)} ->'
+            node = node.next_node
+
+        ll_string += ' None'
+        print(ll_string)
+
 
 
