@@ -38,3 +38,23 @@ class LinkedList:
 
         ll_string += ' None'
         print(ll_string)
+
+        def to_list(self):
+            list_of_contents = []
+            current = self.head
+            while current is not None:
+                list_of_contents.append(current.data)
+                current = current.next_node
+            return list_of_contents
+
+        def get_data_by_id(self, id):
+            list_of_contents = self.to_list()
+            for item in list_of_contents:
+                try:
+                    if type(item) == dict:
+                        if item['id'] == id:
+                            return item
+                    else:
+                        raise Exception
+                except Exception:
+                    print('Данные не являются словарем или в словаре нет id')
