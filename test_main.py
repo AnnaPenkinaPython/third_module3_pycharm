@@ -66,7 +66,7 @@ class Linked_listtest(unittest.TestCase):
             ll.print_ll()
         self.assertEqual(f.getvalue().strip(), expected_output)
 
-        def test_to_list(self):
+    def test_to_list(self):
             ll = LinkedList()
             ll.insert_beginning({'id': 1, 'username': 'lazzy508509'})
             ll.insert_at_end({'id': 2, 'username': 'mik.roz'})
@@ -77,7 +77,7 @@ class Linked_listtest(unittest.TestCase):
             self.assertEqual(lst[0]['id'], 0)
             self.assertEqual(lst[3]['id'], 3)
 
-        def test_get_data_by_id(self):
+    def test_get_data_by_id(self):
             ll = LinkedList()
             ll.insert_beginning({'id': 1, 'username': 'lazzy508509'})
             ll.insert_at_end({'id': 2, 'username': 'mosh_s'})
