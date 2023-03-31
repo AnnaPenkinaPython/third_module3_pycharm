@@ -55,6 +55,6 @@ class LinkedList:
                     if item['id'] == id:
                         return item
                 else:
-                    raise Exception
-            except Exception:
+                    raise TypeError
+            except TypeError:
                 print('Данные не являются словарем или в словаре нет id')
